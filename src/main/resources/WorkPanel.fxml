@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sweetycode.workpanel.WorkController">
+  <tabs>
+    <Tab text="Generate Create Tables">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="588.0" prefWidth="800.0">
+               <children>
+                  <TextArea fx:id="textExcel" layoutX="45.0" layoutY="35.0" prefHeight="237.0" prefWidth="411.0" />
+                  <Button fx:id="btnExcelToSql" layoutX="472.0" layoutY="198.0" mnemonicParsing="false" onAction="#readExcel" prefHeight="27.0" prefWidth="56.0" text="start &gt;" />
+                  <TextArea fx:id="textXml" layoutX="45.0" layoutY="288.0" prefHeight="452.0" prefWidth="413.0" />
+                  <AnchorPane layoutX="476.0" layoutY="246.0" prefHeight="240.0" prefWidth="104.0">
+                     <children>
+                        <CheckBox fx:id="agg1" layoutY="80.0" mnemonicParsing="false" selected="true" text="1:平台大渠道" />
+                        <CheckBox fx:id="agg2" layoutY="100.0" mnemonicParsing="false" text="2:平台区" />
+                        <CheckBox fx:id="agg3" layoutY="120.0" mnemonicParsing="false" selected="true" text="3:平台" />
+                        <CheckBox fx:id="agg4" layoutY="140.0" mnemonicParsing="false" selected="true" text="4:区" />
+                        <CheckBox fx:id="agg5" layoutY="160.0" mnemonicParsing="false" selected="true" text="5:区服" />
+                        <CheckBox fx:id="agg6" layoutY="180.0" mnemonicParsing="false" selected="true" text="6:平台大小渠道" />
+                        <CheckBox fx:id="allselect" allowIndeterminate="true" indeterminate="true" layoutY="10.0" mnemonicParsing="false" text="全选" />
+                     </children>
+                  </AnchorPane>
+                  <TextArea fx:id="textSqlOracle" layoutX="581.0" layoutY="35.0" prefHeight="295.0" prefWidth="405.0" />
+                  <TextArea fx:id="textSqlHive" layoutX="581.0" layoutY="342.0" prefHeight="389.0" prefWidth="403.0" />
+               </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Hbase Preview">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textHbaseSql" layoutX="23.0" layoutY="25.0" prefHeight="32.0" prefWidth="881.0" text="select * from pt_user_profile_mid where rowkey='wk00710279022.pt' and timestamp&lt;='20171205 15:00:00,000'" />
+                  <Button fx:id="btnHbase" layoutX="918.0" layoutY="30.0" mnemonicParsing="false" onAction="#searchHbase" text="Search" />
+                  <TextArea fx:id="textHbase" layoutX="23.0" layoutY="68.0" prefHeight="679.0" prefWidth="950.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Untitled Tab">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField layoutX="239.0" layoutY="193.0" prefHeight="120.0" prefWidth="370.0" text="Anything you want, please tell me.                 TianTian" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
